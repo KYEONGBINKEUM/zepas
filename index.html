@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제파스 :: 웹포트폴리오</title>
+    <!-- style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+    <style>
+    .button{
+                padding: 20px 40px;
+    }
+
+    .if{
+        position: fixed;
+        top:540px;
+        z-index: 99;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000;
+    }
+    .pop_bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.7;
+        display: none;
+        z-index: 9999;
+    }
+    iframe{
+        background: white;
+    }
+    .x , iframe{
+        display: none;
+    }
+    .x{
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        top:-70px;
+        left: 50%;
+        font-size: 3em;
+        font-weight: bold;
+        color: #fff;
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="pop_bg"></div>
+    <div class="if">
+        <div class="x">X</div>
+        <iframe name="pop" width="1200" height="800" src="" frameborder="0"></iframe>
+    </div>
+    <header class="target" id="1">
+        <div class="header_bg"></div>
+        <img id="animate1" src="img/zepas2.png" alt="#">
+        <!--
+            <div class="header_bg1">
+            <p class="a" id="animate2">반갑습니다, 제파스입니다!</p>
+            <div class="spacer"></div>
+            <div id="trigger2"></div>
+        </div>
+        -->
+    </header>
+    <aside id="nav">
+        <nav class="nav">
+            <a id="btn1" href="#1" class="active">MAIN</a>
+            <a id="btn2" href="#2">ABOUT</a>
+            <a id="btn3" href="#3">PORTFOLIO</a>
+            <a id="btn4" href="#4">CONTACT</a>
+        </nav>
+        <div class="logo">
+            <a id="btn1" href="#1"><!-- <img src="img/ZEPAS1.png" alt=""> --> <h1>ZEPAS PORTFOLIO</h1></a>
+        </div>
+    </aside>
+    
+    <section>
+        <article id="2" class="article1">
+            <div class="container target">
+                <div class="video">
+                    <video src="videos/2.mp4" autoplay playsinline loop muted></video>
+                </div>
+                <div class="info">
+                    <h2>안녕하세요,<br><span>UI/UX디자이너</span> 제파스입니다.</h2>
+                    <p>새롭고 독특함을 추구하는 디자이너 제파스<span>@금경빈</span> 입니다. <br>지금부터 열정을 쏟을 준비가 됐습니다!</p>
+                    <div class="site_link">
+                        <a href="">이력서 보기</a>
+                    </div>	
+                </div>
+                <div class="clear"></div>
+                <div class="skill">
+                    <div class="video">
+                        <video src="videos/ps1.mp4" autoplay playsinline loop muted></video>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="skill_text">
+                        <h2>Adobe PS / li</h2>
+                        <p>기본적으로 포토샵과 일러스트레이터를 다뤄 작업물 제작이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="video">
+                        <video src="videos/xd.mp4" autoplay playsinline loop muted></video>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="skill_text">
+                        <h2>Adobe XD</h2>
+                        <p>최근에 떠오르기 시작한 어도비XD를 통해 어플리케이션 디자인작업을 수행할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="video">
+                        <video src="videos/html.mp4" autoplay playsinline loop muted></video>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="skill_text">
+                        <h2>HTML5 / CSS3</h2>
+                        <p>HTML 마크업언어의 틀을 기반으로 CSS 마크업언어로 스타일을 지정할 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="3" class="article2">
+            <div class="container">
+                <div class="portfolio">
+                    <div class="pf">
+                        <div class="pf_img">
+                            <img src="img/jyp.png" alt="">
+                        </div>
+                        <div class="pf_text">
+                            <h2>UI / UX</h2>
+                            <h3>[Web] JYP 엔터테인먼트</h3>
+                            <p>
+                                JYP엔터테인먼트에 최선을 다하는 아티스트와 최고의 팬들을 심볼마크 하나로 이어지는 유대감을 표현하고 생생한 에너지와 열정을 쏟아 붓는 이들에게 리드미컬하고 활동적인 레드톤컬러를 입혀 새롭게 리뉴얼 하였습니다.
+                            </p>
+                            <div class="p">
+                                <span>Color</span>
+                                <div style="background-color: #b4253e; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #cc273f; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #dd2c4b; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #dd304d; width: 30px; height: 30px; border-radius: 5px;"></div>
+                            </div>
+                            <div class="site_link">
+                                <a href="http://keum1996.dothome.co.kr/" target="_blank">사이트 방문하기</a>
+                            </div>
+                            <div class="site_link">
+                                <a href="img/jyp.jpg" target="pop">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pf">
+                        <div class="pf_img">
+                            <img src="img/jointshop.png" alt="">
+                        </div>
+                        <div class="pf_text">
+                            <h2>UI / UX</h2>
+                            <h3>[Web] 조인트샵</h3>
+                            <p>
+                                대한민국은 제조업이 강점인 나라로써 좋은 상품들이 즐비하고 있습니다. 이러한 점을 살리고자 대기업뿐만이 아닌 중소/견기업들의 상품을 해외소비자들과 함께 공제하여 상품을 저렴하게 구입하는 글로벌공제쇼핑몰입니다. 
+                            </p>
+                            <div class="p">
+                                <span>Color</span>
+                                <div style="background-color: #f5ab0d; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #fb3102; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #ffa646; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #46ffbc; width: 30px; height: 30px; border-radius: 5px;"></div>
+                            </div>
+                            <div class="site_link">
+                                <a href="http://jointshop.dothome.co.kr/" target="_blank">사이트 방문하기</a>
+                            </div>
+                            <div class="site_link">
+                                <a href="img/jointshop.jpg" target="pop">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pf">
+                        <div class="pf_img">
+                            <img src="img/axis.png" alt="">
+                        </div>
+                        <div class="pf_text">
+                            <h2>UI / UX</h2>
+                            <h3>[Web] 엑시즈 게임즈</h3>
+                            <p>
+                                엑시즈 게임즈는 게임구매플랫폼으로 스팀과 오리진등을 참고하여 디자인을 진행했습니다. 비주얼에 중점을 두고 주목도를 높이기 위한 색들로 구성하였으며, 복잡한 느낌을 덜기 위해 최소한의 메뉴만을 메인페이지에 담았습니다.
+                            </p>
+                            <div class="p">
+                                <span>Color</span>
+                                <div style="background-color: #65DA60; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #1A1B20; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #0C0C0C; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #313236; width: 30px; height: 30px; border-radius: 5px;"></div>
+                            </div>
+                            <div class="site_link">
+                                <a href="http://hn032522.dothome.co.kr/" target="_blank">사이트 방문하기</a>
+                            </div>
+                            <div class="site_link">
+                                <a href="img/axis.jpg" target="pop">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pf">
+                        <div class="pf_img">
+                            <img src="img/hansung.png" alt="">
+                        </div>
+                        <div class="pf_text">
+                            <h2>UI / UX</h2>
+                            <h3>[Web] 한성컴퓨터</h3>
+                            <p>
+                                한성컴퓨터사의 공식홈페이지는 기존 쇼핑몰과 결합되어진 복합사이트로써, 입지가 커진 한성컴퓨터사의 공식홈페이지가 있으면 좋겠다라는 생각에 타 컴퓨터제조사의 홈페이지를 참고하여 가로사이즈를 전체 활용하는 레이아웃으로 제작하였습니다.
+                            </p>
+                            <div class="p">
+                                <span>Color</span>
+                                <div style="background-color: #8FAA3F; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #428AD2; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #E8E8E8; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #2E2E2E; width: 30px; height: 30px; border-radius: 5px;"></div>
+                            </div>
+                            <div class="site_link">
+                                <a href="img/hansung.jpg" target="pop">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pf">
+                        <div class="pf_img">
+                            <img src="img/rentit.png" alt="">
+                        </div>
+                        <div class="pf_text">
+                            <h2>UI / UX</h2>
+                            <h3>[App] 렌트아이티</h3>
+                            <p>
+                                가전제품을 매번 새롭게 구매한다면 얼마나 많은 비용이 들까요? 이러한 고민을 월 구독료시스템을 통하여 해결하면 좋지 않을까라는 생각으로 앱디자인을 진행했습니다. 각 구독료에 따른 한도내에서 마음껏 렌탈하세요!
+                            </p>
+                            <div class="p">
+                                <span>Color</span>
+                                <div style="background-color: #FF9B44; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #1A1A1A; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #B9B9B9; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #DFDFDF; width: 30px; height: 30px; border-radius: 5px;"></div>
+                            </div>
+                            <div class="site_link">
+                                <a href="img/rentit.jpg" target="pop">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pf">
+                        <div class="pf_img">
+                            <img src="img/easy.png" alt="">
+                        </div>
+                        <div class="pf_text">
+                            <h2>UI / UX</h2>
+                            <h3>[App] 이지베스트먼트</h3>
+                            <p>
+                                금융투자어플은 다소 복잡하고 옛적인 즉, 보수적인 디자인을 가진 경우가 많습니다. 이런 불편한점으로 인해 고객이 유입 안된다면 큰 손해를 보는거겠죠? 앞으로의 세대들을 위한 직관적이고 트렌디한 GUI로 제작했습니다.
+                            </p>
+                            <div class="p">
+                                <span>Color</span>
+                                <div style="background-color: #1A7BC1; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #94FFFB; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #F35957; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #8C8C8C; width: 30px; height: 30px; border-radius: 5px;"></div>
+                            </div>
+                            <div class="site_link">
+                                <a href="img/easy.jpg" target="pop">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pf">
+                        <div class="pf_img">
+                            <img src="img/monly.jpg" alt="">
+                        </div>
+                        <div class="pf_text">
+                            <h2>UI / UX</h2>
+                            <h3>[App] 몬리 뮤직</h3>
+                            <p>
+                                음악스트리밍은 나날이 늘어가고 있는 와중에, 소비하는 소비자들에겐 돌아오는 혜택은 미적지근한 것 같습니다. 그렇다면 탈중앙화된 블록체인시스템을 이용한 코인을 스트리밍과 접목하여 스트리밍을 하면 코인으로 보상해주는 구상을 해봤습니다.
+                            </p>
+                            <div class="p">
+                                <span>Color</span>
+                                <div style="background-color: #FFEB3E; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #101010; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #777777; width: 30px; height: 30px; border-radius: 5px;"></div>
+                                <div style="background-color: #171717; width: 30px; height: 30px; border-radius: 5px;"></div>
+                            </div>
+                            <div class="site_link">
+                                <a href="img/monly1.jpg" target="pop">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- portfolio -->
+                
+                <h2 class="gd">Graphic Design</h2>
+                <div class="portfolio1">
+                    
+                    <div class="pf1">
+                        <div><a href="img/ddfood.jpg" target="pop"><img src="img/ddfood.png" alt=""><h2>[로고*배너] 대득푸드</h2></a></div>
+                        <div><a href="img/mail.jpg" target="pop"><img src="img/mail.png" alt=""><h2>[배너]프로페셔널</h2></a></div>
+                        <div><a href="img/chaorn.jpg" target="pop"><img src="img/chaorn.png" alt=""><h2>[로고*배너*웹]차오른</h2></a></div>
+                    </div>
+                    <div class="pf1">
+                        <div><a href="img/xiaomi.jpg" target="pop"><img src="img/hongmi.jpg" alt=""><h2>[상세페이지]홍미노트9S</h2></a></div>
+                        <div><a href="img/wii1.jpg" target="pop"><img src="img/wii.jpg" alt=""><h2>[포스터]헬리코박터 윌</h2></a></div>
+                        <div><a href="img/retouching.jpg" target="pop"><img src="img/retouching1.jpg" alt=""><h2>[사진보정]상품사진 보정작업</h2></a></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer id="4">
+        <div class="container">
+            <div class="footer">
+                <h2>연락을 기다리겠습니다</h2>
+                <div class="hr"></div>
+                <div class="tel"><a href="tel:01028278785">+82 10 2827 8785</a></div>
+                <div class="mail"><a href="mailto:hn032522@naver.com">hn032522@naver.com</a></div>
+                <div class="site_link"><a href="http://hn03252.dothome.co.kr" target="_blank">개인사이트 방문하기</a></div>
+                
+            </div>
+        </div>
+    </footer>
+    <address>Copyright 2020. KEUM KYEONG BIN. All rights reserved.</address>
+    
+    
+     <!-- 스크립트 -->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src='js/scrollmagic.min.js'></script>
+    <!-- <script src='js/addlndicators.min.js'></script> -->
+    <script src='js/tweenmax.min.js'></script>
+    <script src='js/animation.gsap.js'></script>
+    <script src="js/animate.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/scroll_menucolor.js"></script>
+    <script src="js/slick.min.js"></script>
+    
+    <script>
+        //슬릭
+        $(document).ready(function(){
+          $('.portfolio').slick({
+              dots:true,
+              autoplay:true,
+              autoplaySpeed:3000
+          });
+        });
+        
+        //슬릭1
+        $(document).ready(function(){
+          $('.portfolio1').slick({
+              autoplay:true,
+              autoplaySpeed:2000,
+              arrows:true
+          });
+        });
+        
+        //이미지
+        $(function(){
+                $('.pf1 div, .site_link a').click(function(){
+                    $('iframe, .x, .pop_bg').show();
+                    $('.if').css('marginTop','-450px');
+                    $('body').css('overflow','hidden');
+            });
+            $('.x, .pop_bg').click(function(){
+                $('iframe, .x, .pop_bg').hide();
+                $('.if').css('marginTip','0px');
+                $('body').css('overflow','auto');
+            });
+        });
+        
+    </script>
+</body>
+</html>

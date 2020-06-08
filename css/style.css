@@ -1,0 +1,727 @@
+@charset "utf-8";
+
+
+/*
+@import "bourbon";
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+@include keyframes(scrollBad) {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -320px;
+  }
+}
+*/
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -100%;
+  }
+}
+
+
+/* 슬릭 */
+.slick-prev{
+    position: absolute;
+    left:-10%;
+    top: 45%;
+    width: 25px;
+    height: 86px;
+    background: url(../img/prev.png);
+    text-indent: -9999px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.slick-next{
+    position: absolute;
+    right:-10%;
+    top: 45%;
+    width: 25px;
+    height: 86px;
+    background: url(../img/next.png);
+    text-indent: -9999px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.slick-dots{
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 120px;
+}
+.slick-dots li{
+    float: left;
+    background: url(../img/dot.png);
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+li.slick-active{
+    background: url(../img/dot_active.png);
+    width: 20px;
+    height: 20px;
+}
+.portfolio1 .slick-prev{
+    position: absolute;
+    top: 460px;
+    left: 650px;
+    width: 28px;
+    height: 28px;
+    z-index: 999;
+    background: url(../img/prev1.png);
+    transition: all 0.2s ease-in-out;
+}
+.portfolio1 .slick-next{
+    position: absolute;
+    top: 460px;
+    right: 650px;
+    width: 28px;
+    height: 28px;
+    z-index: 999;
+    background: url(../img/next1.png);
+    transition: all 0.2s ease-in-out;
+}
+.portfolio1 .slick-prev:hover{
+    background: url(../img/prev1_a.png);
+}
+.portfolio1 .slick-next:hover{
+    background: url(../img/next1_a.png);
+}
+
+
+/* 클리어 */
+.clear{
+    clear: both;
+}
+
+/* 폰트 스포카 한 산스 */
+@font-face{
+    font-family:'Spoqa Han Sans'; font-style: Sans-serif; font-weight: 400;
+    src:url('../fonts/SpoqaHanSansRegular.ttf') format('truetype');
+}
+@font-face{
+    font-family:'Spoqa Han Sans'; font-style: Sans-serif; font-weight: 800;
+    src:url('../fonts/SpoqaHanSansBold.ttf') format('truetype');
+}
+@font-face{
+    font-family:'Spoqa Han Sans'; font-style: Sans-serif; font-weight: 200;
+    src:url('../fonts/SpoqaHanSansLight.ttf') format('truetype');
+}
+@font-face{
+    font-family:'Spoqa Han Sans'; font-style: Sans-serif; font-weight: 100;
+    src:url('../fonts/SpoqaHanSansThin.ttf') format('truetype');
+}
+
+/* 레이아웃 */
+header{
+    position: relative;
+}
+nav{}
+section{}
+footer{}
+
+/* 컨테이너 영역 */
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+/* 공백 처리 */
+.spacer{
+    height: 100px;
+}
+
+/* 헤더 */
+.header_bg{
+background-color: #E83428;
+/* background-image: url(http://scarbroughstudios.com/img/codepen.svg); */
+background-image: url(../img/bg.png);
+background-position: center center;
+background-size: 500px;  
+/*@include animation(scrollBad 5s linear infinite);*/
+animation: animatedBackground 20s linear infinite;
+    width: 100%;
+    height: 130vh;
+}
+
+/*
+.header_bg1{
+    background-color: #E83428;
+    width: 100%;
+    height: 50vh;
+}
+.header_bg1 p{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-size: 48px;
+    line-height: 48px;
+}
+*/
+header img{
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    transform: translateX(-50%);
+}
+
+/* nav */
+.logo{
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    z-index: 999;
+}
+.nav{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+#nav .nav {
+    text-align: right;
+}
+#nav .nav a{
+    /* display: block; */
+    color: #fff;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1em;
+    /* margin-bottom: 16px; */
+    margin-right: 30px;
+    transition: all 0.2s linear;
+}
+#nav .nav a:last-child{
+    margin-right: 0;
+}
+/*
+#nav .nav a::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    right: -30px;
+    margin-top: 18px;
+}
+*/
+
+#nav .nav a.alt-color{
+    color: #141414;
+}
+#nav .nav a.active{
+    color: #E83428;
+    background-color: rgba(0,0,0,0.6);
+    font-weight: 800;
+    padding: 0 12px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+#nav .logo a h1{
+    color: #fff;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1em;
+    transition: 0.2s all linear;
+}
+#nav .logo a h1.alt-color{
+    color: #141414;
+}
+
+/* article1 */
+.article1{
+    background-color: #F5F5F5;
+    padding-left: 1%;
+    padding-right: 1%;
+    overflow: hidden;
+    box-shadow: 
+       inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05),
+       inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
+.article1 .video{
+    width: 55%;
+    background-color: #000;
+    height: 420px;
+    float: left;
+    margin-top: 120px;
+}
+.article1 .video video{
+    width: 100%;
+    height: auto;
+}
+.article1 .info{
+    float: left;
+    display: inline-block;
+    padding-top: 92px;
+    padding-left: 80px;
+}
+.article1 .info h2{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    line-height: 1.2em;
+    letter-spacing: -0.02em;
+    color: #141414;
+    font-size: 42px;
+    font-weight: 400;
+    margin-top: 120px;
+}
+.article1 .info h2 span{
+    font-weight: 800;
+    font-size: 42px;
+    color: #E83428;
+}
+.article1 .info p{
+    margin-top: 20px;
+    font-size: 20px;
+    color:#191919;
+    letter-spacing: -0.05em;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+}
+.article1 .info p span{
+    font-size: 14px;
+    color:#777;
+    letter-spacing: -0.05em;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    line-height: -10px;
+}
+.article1 .info .site_link{
+    display: inline-block;
+    margin-top: 40px;
+}
+.article1 .info .site_link a{
+    position: relative;
+    z-index: 99;
+    border: 2px solid #E83428;
+    padding: 10px 40px;
+    color: #E83428;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+.article1 .info .site_link a:hover{
+    background-color: #E83428;
+    color: #fff;
+}
+
+.article1 .skill{
+    width: 31.3333%;
+    background-color: #fff;
+    float: left;
+    margin:140px 1% 120px 1%;
+    box-shadow:
+        /*inset 0px 0px 0px 1px rgba(0,0,0,0.15),*/
+        0px 2px 3px 0px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.article1 .skill:hover{
+    transform: scale(1.01);
+}
+
+.article1 .skill .video{
+    width: 80%;
+    background-color: #000;
+    height: 200px;
+    margin-left: 10%;
+    margin-top: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.article1 .skill .video video{
+    width: 100%;
+    height: auto;
+    
+}
+.article1 .skill .skill_text{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+.article1 .skill .skill_text h2{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 1em;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: #141414;
+    transition: all 0.2s ease-in-out;
+}
+.article1 .skill:hover .skill_text h2{
+    color: #E83428;
+}
+.article1 .skill .skill_text p{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 2em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #999;
+    transition: all 0.2s ease-in-out;
+}
+.article1 .skill:hover .skill_text p{
+    color: #141414;
+}
+
+
+
+/* article2 */
+.article2{
+    background-color: #eee;
+    overflow: hidden;
+}
+.portfolio{
+    padding-top: 120px;
+}
+.portfolio .pf .pf_img{
+    
+}
+.portfolio .pf .pf_img img{
+    width: 50%;
+    float: left;
+    margin-bottom: 120px;
+}
+.portfolio .pf .pf_text{
+    width: 46%;
+    margin-left: 4%;
+    float: left;
+}
+.portfolio .pf .pf_text h2{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    color: #E83428;
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 105px;
+}
+.portfolio .pf .pf_text h3{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    color: #141414;
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+.portfolio .pf .pf_text .p{
+    margin-top: 30px;
+}
+.portfolio .pf .pf_text .p span{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    color: #141414;
+    font-size: 16px;
+    margin-right: 30px;
+    vertical-align: top;
+}
+.portfolio .pf .pf_text .p div{
+    display: inline-block;
+}
+.portfolio .pf .pf_text p{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    color: #141414;
+    font-size: 16px;
+    margin-right: 30px;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.portfolio .pf .pf_text .site_link{
+    display: inline-block;
+    margin-top: 40px;
+}
+.portfolio .pf .pf_text .site_link a{
+    position: relative;
+    z-index: 99;
+    border: 2px solid #E83428;
+    padding: 10px 40px;
+    color: #E83428;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+.portfolio .pf .pf_text .site_link a:hover{
+    background-color: #E83428;
+    color: #fff;
+}
+
+/* portfolio1 */
+.portfolio1{
+    
+}
+.portfolio1 .pf1{
+    height: auto;
+    margin-bottom: 0px;
+}
+.portfolio1 .pf1 div{
+    width: 32.3333%;
+    margin-right: 1%;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+    margin-top: 40px;
+    box-shadow: 
+        0px 2px 3px 0px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 100px;
+}
+.portfolio1 .pf1 div:hover{
+    transform: scale(1.02);
+}
+.portfolio1 .pf1 div a{
+    outline: none;
+}
+
+.portfolio1 .pf1 div a img{
+    width: 100%;
+    height: 100%;
+}
+.portfolio1 .pf1 div a h2{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+.portfolio1 .pf1 div:last-child{
+    margin-right: 0;
+}
+.gd{
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    color: #E83428;
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 160px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* footer */
+footer{
+    height: 95vh;
+    background: #303030;
+    position: relative;
+}
+footer .footer{
+    width: 100%;
+    position: absolute;
+    height: 75vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    margin-top: -20vh;
+}
+footer .footer h2{
+    text-align: center;
+    color: #fff;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-size: 38px;
+    font-weight: 800;
+}
+footer .footer .hr{
+    width: 80px;
+    height: 8px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+footer .footer .tel{
+    text-align: center;
+    margin-top: 50px;
+}
+footer .footer .tel a{
+    color: #999;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-size: 32px;
+    font-weight: 800;
+    transition: all 0.2s ease-in-out;
+}
+footer .footer .tel a:hover{
+    color: #fff;
+}
+footer .footer .mail{
+    text-align: center;
+    margin-top: 20px;
+}
+footer .footer .mail a{
+    color: #999;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-size: 32px;
+    font-weight: 800;
+    transition: all 0.2s ease-in-out;
+}
+footer .footer .mail a:hover{
+    color: #fff;
+}
+footer .footer .site_link{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+footer .footer .site_link a{
+    position: relative;
+    z-index: 99;
+    background-color: #E83428;
+    padding: 10px 40px;
+    color: #fff;
+    font-family: 'Spoqa Han Sans', Sans-serif ;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+address{
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* 미디어 쿼리 */
+/* 0 ~ 1440px까지 */
+@media(max-width: 1440px){
+    /* 슬릭 */
+    .slick-prev{
+        display: none;
+    }
+    .slick-next{
+        display: none;
+    }
+    .slick-dots{
+        bottom: -120px;
+        margin-bottom: 160px;
+    }
+    .portfolio1 .slick-next{
+        visibility: hidden;
+    }
+    .portfolio1 .slick-prev{
+        visibility: hidden;
+    }
+    .container{
+        width: 95%;
+    }
+    .article1{
+        text-align: center;
+    }
+    .article1 .video{
+        margin:80px auto 0 auto;
+        width: 100%;
+        height:100%;
+        float: none;
+    }
+    .article1 .video video{
+        width: 100%;
+        margin-bottom: -4px;
+    }
+    .article1 .info{
+        margin-top: 0;
+        float: none;
+        text-align: center;
+        padding: 0;
+    }
+    .article1 .info h2{
+        margin-top: 80px;
+    }
+    .article1 .info p{
+        margin-top: 30px;
+    }
+    .article1 .skill .video{
+        height: auto;
+    }
+    .article1 .skill{
+        height: 465px;
+    }
+    .portfolio{
+        padding-top: 80px;
+    }
+    .portfolio .pf .pf_img img{
+        width: 100%;
+        float: none;
+        margin-bottom: 60px;
+        
+    }
+    .portfolio .pf .pf_text{
+        text-align: center;
+        width: 100%;
+        margin-left: 0%;
+        float: none;
+        margin-bottom: 130px;
+    }
+    .portfolio .pf .pf_text h2{
+        margin-top: 0;
+    }
+    .portfolio .pf .pf_text p{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .portfolio1 .pf1{
+        margin-bottom: 0px;
+    }
+}
+
+/* 0 ~ 1000px까지 */
+@media(max-width: 1000px){
+    .article1 .skill{
+        width: 100%;
+        height: auto;
+        margin-bottom: 0px;
+        margin-top: 60px;
+    }
+    .article1 .skill:nth-child(4){
+        margin-top: 100px;
+    }
+    .article1 .skill:last-child{
+        margin-bottom: 100px;
+    }
+
+    
+}
+
+/* 0 ~ 768px까지 */
+@media(max-width:768px){
+    .portfolio1 .pf1 div a h2{
+        font-size: 16px;
+    }
+}
+
+/* 0 ~ 375px까지 */
+@media(max-width: 375px){
+    header img{
+        width: 100%;
+        padding-left: 10%;
+    }
+    .portfolio1 .pf1 div a h2{
+        font-size: 14px;
+    }
+}

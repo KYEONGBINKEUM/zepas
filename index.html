@@ -363,10 +363,36 @@
     
     
     
-    <script src="js/animate.js"></script>
+    <script>
+        //애니메이트1
+    (function () {
+
+      var controller = new ScrollMagic.Controller();
+
+      var tween1 = TweenMax.to('#animate1', 2, {
+        scale: 0.8,
+        opacity: 0,
+        rotation: 0,
+        //repeat: -1,
+        y:0 });
+
+
+      var scene = new ScrollMagic.Scene({
+        triggerElement: "#trigger1",
+        duration: "70%" }).
+
+      setTween(tween1).
+      addTo(controller).
+      addIndicators({
+        name: "1" });
+
+
+    })();
+    </script>
     
     
     <script>
+        
         //슬릭
         $(document).ready(function(){
           $('.portfolio').slick({

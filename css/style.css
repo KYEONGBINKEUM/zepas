@@ -148,11 +148,11 @@ footer{}
 .header_bg{
 background-color: #E83428;
 /* background-image: url(http://scarbroughstudios.com/img/codepen.svg); */
-/* background-image: url(../img/bg.png);
+background-image: url(../img/bg.png);
 background-position: center center;
 background-size: 500px;  
 /*@include animation(scrollBad 5s linear infinite);*/
-/* animation: animatedBackground 20s linear infinite;*/
+animation: animatedBackground 20s linear infinite;
     width: 100%;
     height: 130vh;
 }
